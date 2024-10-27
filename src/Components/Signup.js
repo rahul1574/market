@@ -38,7 +38,7 @@ function Signup() {
         if (!validateInputs()) return;
 
         try {
-            const response = await axios.post('http://phpweb.infinityfreeapp.com/index.php', inputs);
+            const response = await axios.post('https://phpweb.infinityfreeapp.com/index.php'', inputs);
             setMessage(response.data.message);
             // console.log(response.data.status);
             if (response.data.status === 1) {
@@ -52,7 +52,7 @@ function Signup() {
     const handleLogin = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://phpweb.infinityfreeapp.com/index.php', inputs);
+            const response = await axios.post('https://phpweb.infinityfreeapp.com/index.php', inputs);
             setMessage(response.data.message);
             if (response.data.status === 1) {
                 const userDetails = response.data.user;
